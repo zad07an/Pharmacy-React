@@ -6,7 +6,6 @@ import Skeleton from "react-loading-skeleton";
 import homeWrapper from "../HOC/homeWrapper";
 
 const Home = homeWrapper(({ isLoading, drugs, navigate }) => {
-  console.log("Home page rendering");
   return (
     <section className="w-full min-h-screen lg:px-20 md:px10 px-5 flex items-center flex-col pb-20">
       <section className=" w-full h-screen grid lg:grid-cols-2 lg:p-0 pt-28 lg:gap-0 gap-10 items-center">

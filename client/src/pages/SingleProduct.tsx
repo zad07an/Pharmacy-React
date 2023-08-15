@@ -4,7 +4,6 @@ import SingleProductSkeleton from "../components/single-product-skeleton/SingleP
 import singleProductWrapper from "../HOC/singleProductWrapper";
 
 const SingleProduct = singleProductWrapper(({ isLoading, drug, handleSelectSize, sizeIndex }) => {
-  console.log("SingleProduct page rendering");
   return (
     <section className="w-full min-h-screen flex items-center flex-col pb-20 pt-20">
       {isLoading ? (
