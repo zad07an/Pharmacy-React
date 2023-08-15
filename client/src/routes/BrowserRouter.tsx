@@ -5,6 +5,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements
 } from "react-router-dom";
+import NotFound from "../pages/NotFound";
 
 const Home = lazy(() => import("../pages/Home"));
 const Layout = lazy(() => import("../layout/Layout"));
@@ -23,6 +24,7 @@ function BrowserRouter() {
           <Route path={`:categoryId` || "all"} element={<Products />} />
           <Route path=":categoryId/:product/:id" element={<SingleProduct />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   );
