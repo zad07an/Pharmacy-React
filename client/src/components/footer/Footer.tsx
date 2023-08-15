@@ -67,7 +67,7 @@ function Footer() {
           </div>
         </div>
       </section>
-      <section className=" w-full text-center py-4 xxs:text-base text-sm">
+      <section className=" w-full text-center xs:py-4 xxs:text-base text-sm">
         <p>By ArmCoding - © 2022 Բոլոր իրավունքները պաշտպանված են</p>
       </section>
     </footer>

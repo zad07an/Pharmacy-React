@@ -10,6 +10,19 @@
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
   }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #12724f;
+    border-radius: 5px;
+  }
 }
 
 .active {

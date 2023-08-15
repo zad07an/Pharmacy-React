@@ -9,6 +9,7 @@ import useClickOutside from "../../hooks/useClickOutside";
 import Overlay from "../ui/Overlay";
 import { NavbarLinkProps } from "../../lib/models";
 import useFetch from "../../hooks/useFetch";
+import useHideScrollBar from "../../hooks/useHideScrollBar";
 
 function Navbar() {
   const { isLoading, data: links } = useFetch<NavbarLinkProps[]>("http://localhost:8080/navbar");
@@ -19,6 +20,7 @@ function Navbar() {
   const handleCloseMenu = () => setIsMenuOpen(false);
 
   useClickOutside(menuRef, handleCloseMenu);
+  useHideScrollBar(isMenuOpen);
 
   return (
     <nav className=" fixed left-0 w-full h-20 flex items-center justify-between lg:px-20 md:px-10 px-5 bg-white shadow-md z-50">
