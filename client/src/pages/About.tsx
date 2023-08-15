@@ -5,9 +5,7 @@ import Image from "../components/ui/Image";
 const About = aboutWrapper(() => {
   return (
     <section className=" w-full min-h-screen lg:px-20 md:px10 px-5 flex items-center flex-col gap-20 lg:pb-56 pb-32 pt-24">
-      <div className=" mt-10">
-        <h2 className=" text-4xl font-semibold text-green-1 uppercase">ՄԵՐ ՄԱՍԻՆ</h2>
-      </div>
+      <h2 className=" mt-10 text-4xl font-semibold text-green-1 uppercase">ՄԵՐ ՄԱՍԻՆ</h2>
       <div className=" w-full grid lg:grid-cols-2 lg:gap-10 gap-20 items-start lg:mb-40 xs:mt-0 mt-10">
         <div className=" w-full flex items-center justify-center">
           <div className=" w-fit aspect-video relative">
@@ -17,25 +15,23 @@ const About = aboutWrapper(() => {
             </div>
           </div>
         </div>
-        <div>
-          <p>
-            Բինտեր, թանզիֆե մանրէազերծված բժշկական անձեռոցիկներ, մանրէազերծված և ոչ մանրէազերծված
-            բժշկական վիրակապեր արտադրող;Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-            with desktop publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div>
+        <p>
+          Բինտեր, թանզիֆե մանրէազերծված բժշկական անձեռոցիկներ, մանրէազերծված և ոչ մանրէազերծված
+          բժշկական վիրակապեր արտադրող;Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+          the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+          specimen book. It has survived not only five centuries, but also the leap into electronic
+          typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+          release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+          publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is
+          simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived not only five
+          centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+          passages, and more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
       </div>
       <div className=" w-full grid lg:grid-cols-2 gap-10 items-start lg:mt-0 xs:mt-0 mt-20">
         <p className="lg:order-1 order-2">

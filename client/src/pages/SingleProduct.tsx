@@ -23,9 +23,7 @@ const SingleProduct = singleProductWrapper(({ isLoading, drug, handleSelectSize,
             </div>
           </div>
           <div className=" flex items-start flex-col gap-6">
-            <div>
-              <h2 className=" text-3xl text-green-1 font-semibold uppercase">{drug?.title}</h2>
-            </div>
+            <h2 className=" text-3xl text-green-1 font-semibold uppercase">{drug?.title}</h2>
             <div className=" flex items-center justify-start flex-wrap gap-6">
               {drug?.sizes?.map((size, index: number) => (
                 <div
@@ -52,9 +50,7 @@ const SingleProduct = singleProductWrapper(({ isLoading, drug, handleSelectSize,
                 {drug?.packs} հատ
               </div>
             </div>
-            <div>
-              <p>{drug?.body}</p>
-            </div>
+            <p>{drug?.body}</p>
           </div>
         </div>
       )}

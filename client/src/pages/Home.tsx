@@ -10,15 +10,11 @@ const Home = homeWrapper(({ isLoading, drugs, navigate }) => {
     <section className="w-full min-h-screen lg:px-20 md:px10 px-5 flex items-center flex-col pb-20">
       <section className=" w-full h-screen grid lg:grid-cols-2 lg:p-0 pt-28 lg:gap-0 gap-10 items-center">
         <div className=" w-full flex lg:items-start lg:justify-start items-center justify-center flex-col gap-6 lg:p-0 lg:pr-32 sm:px-20 lg:text-start text-center">
-          <div>
-            <h1 className=" text-4xl font-semibold text-green-1">ԱՌԱՋԻՆԸ ՀԱՅԱՍՏԱՆՈՒՄ</h1>
-          </div>
-          <div>
-            <p>
-              Բինտեր, թանզիֆե մանրէազերծված բժշկական անձեռոցիկներ, մանրէազերծված և ոչ մանրէազերծված
-              բժշկական վիրակապեր արտադրող;
-            </p>
-          </div>
+          <h1 className=" text-4xl font-semibold text-green-1">ԱՌԱՋԻՆԸ ՀԱՅԱՍՏԱՆՈՒՄ</h1>
+          <p>
+            Բինտեր, թանզիֆե մանրէազերծված բժշկական անձեռոցիկներ, մանրէազերծված և ոչ մանրէազերծված
+            բժշկական վիրակապեր արտադրող;
+          </p>
           <button
             className=" px-10 py-4 rounded-xl bg-green-1 text-white"
             onClick={() => navigate("/about-us")}
@@ -44,28 +40,20 @@ const Home = homeWrapper(({ isLoading, drugs, navigate }) => {
             ? [...Array(8).keys()].map((index: number) => <DrugSkeleton key={index} />)
             : drugs?.length && drugs?.map(drug => <Drug key={drug?.id} drug={drug} />)}
         </div>
-        <div className=" my-10">
-          <button
-            className=" px-8 py-4 rounded-lg bg-green-1 uppercase text-white"
-            onClick={() => navigate("/products/all")}
-          >
-            ՏԵՍՆԵԼ ԱՄԲՈՂՋԸ
-          </button>
-        </div>
+        <button
+          className=" px-8 my-10 py-4 rounded-lg bg-green-1 uppercase text-white"
+          onClick={() => navigate("/products/all")}
+        >
+          ՏԵՍՆԵԼ ԱՄԲՈՂՋԸ
+        </button>
       </section>
       <section className=" w-full h-[calc(100vh-80px)] grid lg:grid-cols-2 lg:p-0 pt-10 lg:gap-0 gap-10 items-center">
         <div className=" w-full flex lg:items-start lg:justify-start items-center justify-center flex-col gap-6 lg:p-0 lg:pr-32 sm:px-20 lg:text-start text-center">
-          <div>
-            <h1 className=" text-4xl font-semibold text-green-1">
-              ԲԺՇԿԱԿԱՆ ՊԱՐԱԳԱՆԵՐԻ ՍՏԵՐԻԼԻԶԱՑՈՒՄ
-            </h1>
-          </div>
-          <div>
-            <p>Մենք առաջարկում ենք ԲԺՇԿԱԿԱՆ ՊԱՐԱԳԱՆԵՐԻ ՍՏԵՐԻԼԻԶԱՑՈՒՄ</p>
-          </div>
-          <div>
-            <button className=" px-10 py-4 rounded-xl bg-green-1 text-white">ԿԱՐԴԱԼ ԱՎԵԼԻՆ</button>
-          </div>
+          <h1 className=" text-4xl font-semibold text-green-1">
+            ԲԺՇԿԱԿԱՆ ՊԱՐԱԳԱՆԵՐԻ ՍՏԵՐԻԼԻԶԱՑՈՒՄ
+          </h1>
+          <p>Մենք առաջարկում ենք ԲԺՇԿԱԿԱՆ ՊԱՐԱԳԱՆԵՐԻ ՍՏԵՐԻԼԻԶԱՑՈՒՄ</p>
+          <button className=" px-10 py-4 rounded-xl bg-green-1 text-white">ԿԱՐԴԱԼ ԱՎԵԼԻՆ</button>
         </div>
         <div className=" flex items-center justify-center">
           <div className=" aspect-video relative">
@@ -77,9 +65,7 @@ const Home = homeWrapper(({ isLoading, drugs, navigate }) => {
         </div>
       </section>
       <section className=" w-full flex items-center flex-col text-center lg:m-0 mt-32">
-        <div className=" my-10">
-          <h2 className=" text-4xl text-green-1 font-semibold">ԳՈՐԾԸՆԿԵՐՆԵՐ</h2>
-        </div>
+        <h2 className=" text-4xl my-10 text-green-1 font-semibold">ԳՈՐԾԸՆԿԵՐՆԵՐ</h2>
         <div className=" w-full grid lg:grid-cols-3 sm:grid-cols-2 gap-x-6 gap-y-12">
           {isLoading
             ? [...Array(6).keys()]?.map((index: number) => (
@@ -99,11 +85,9 @@ const Home = homeWrapper(({ isLoading, drugs, navigate }) => {
                 </div>
               ))}
         </div>
-        <div className=" my-10">
-          <button className=" px-8 py-4 rounded-lg bg-green-1 uppercase text-white">
-            ՏԵՍՆԵԼ ԱՄԲՈՂՋԸ
-          </button>
-        </div>
+        <button className=" my-10 px-8 py-4 rounded-lg bg-green-1 uppercase text-white">
+          ՏԵՍՆԵԼ ԱՄԲՈՂՋԸ
+        </button>
       </section>
       <section className=" w-full h-fit grid lg:grid-cols-2 lg:p-0 pt-10 lg:gap-0 gap-10 items-start mt-20">
         <div className=" flex items-center flex-col md:gap-0 gap-10">
@@ -125,9 +109,7 @@ const Home = homeWrapper(({ isLoading, drugs, navigate }) => {
           </div>
         </div>
         <div className=" flex items-center flex-col gap-6 sm:px-24">
-          <div>
-            <h2 className=" text-green-1 text-4xl font-semibold">ԿԱՊՆՎԵՔ ՄԵԶ ՀԵՏ ՀԻՄԱ</h2>
-          </div>
+          <h2 className=" text-green-1 text-4xl font-semibold">ԿԱՊՆՎԵՔ ՄԵԶ ՀԵՏ ՀԻՄԱ</h2>
           <form action="" className=" w-full flex items-center flex-col gap-6">
             <input
               type="text"
