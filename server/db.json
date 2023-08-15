@@ -1,0 +1,224 @@
+{
+  "navbar": [
+    {
+      "pathname": "ԳԼԽԱՎՈՐ",
+      "path": "/"
+    },
+    {
+      "pathname": "ՄԵՐ ՄԱՍԻՆ",
+      "path": "/about-us"
+    },
+    {
+      "pathname": "ԱՐՏԱԴՐԱՆՔ",
+      "path": "/products"
+    },
+    {
+      "pathname": "ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ",
+      "path": "/services"
+    },
+    {
+      "pathname": "ԳՈՐԾԸՆԿԵՐՆԵՐ",
+      "path": "/parterns"
+    },
+    {
+      "pathname": "ՀԵՏԱԴԱՐՁ ԿԱՊ",
+      "path": "/feedback"
+    }
+  ],
+  "drugs": [
+    {
+      "id": 1,
+      "title": "բժշկական անձեռոցիկ ՍՏԵՐԻԼ (ինդիվիդուալ)",
+      "body": "Բինտեր, թանզիֆե մանրէազերծված բժշկական անձեռոցիկներ, մանրէազերծված և ոչ մանրէազերծված բժշկական վիրակապեր արտադրող;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, ",
+      "sizes": [
+        {
+          "height": 16,
+          "width": 10
+        },
+        {
+          "height": 14,
+          "width": 7
+        },
+        {
+          "height": 10,
+          "width": 5
+        }
+      ],
+      "layers": 8,
+      "packs": 10,
+      "isSterile": true,
+      "image": "/assets/tanzif.png",
+      "category": "tanzifner"
+    },
+    {
+      "id": 2,
+      "title": "բժշկական անձեռոցիկ ՍՏԵՐԻԼ (ինդիվիդուալ)",
+      "body": "Բինտեր, թանզիֆե մանրէազերծված բժշկական անձեռոցիկներ, մանրէազերծված և ոչ մանրէազերծված բժշկական վիրակապեր արտադրող;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, ",
+      "sizes": [
+        {
+          "height": 16,
+          "width": 10
+        },
+        {
+          "height": 14,
+          "width": 7
+        },
+        {
+          "height": 10,
+          "width": 5
+        }
+      ],
+      "layers": 8,
+      "packs": 10,
+      "isSterile": true,
+      "image": "/assets/drug.png",
+      "category": "binter"
+    },
+    {
+      "id": 3,
+      "title": "բժշկական անձեռոցիկ ՍՏԵՐԻԼ (ինդիվիդուալ)",
+      "body": "Բինտեր, թանզիֆե մանրէազերծված բժշկական անձեռոցիկներ, մանրէազերծված և ոչ մանրէազերծված բժշկական վիրակապեր արտադրող;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, ",
+      "sizes": [
+        {
+          "height": 16,
+          "width": 10
+        },
+        {
+          "height": 14,
+          "width": 7
+        },
+        {
+          "height": 10,
+          "width": 5
+        }
+      ],
+      "layers": 8,
+      "packs": 10,
+      "isSterile": false,
+      "image": "/assets/drug.png",
+      "category": "binter"
+    },
+    {
+      "id": 4,
+      "title": "բժշկական անձեռոցիկ ՍՏԵՐԻԼ (ինդիվիդուալ)",
+      "body": "Բինտեր, թանզիֆե մանրէազերծված բժշկական անձեռոցիկներ, մանրէազերծված և ոչ մանրէազերծված բժշկական վիրակապեր արտադրող;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, ",
+      "sizes": [
+        {
+          "height": 16,
+          "width": 10
+        },
+        {
+          "height": 14,
+          "width": 7
+        },
+        {
+          "height": 10,
+          "width": 5
+        }
+      ],
+      "layers": 8,
+      "packs": 10,
+      "isSterile": false,
+      "image": "/assets/tanzif.png",
+      "category": "tanzifner"
+    },
+    {
+      "id": 5,
+      "title": "բժշկական անձեռոցիկ ՍՏԵՐԻԼ (ինդիվիդուալ)",
+      "body": "Բինտեր, թանզիֆե մանրէազերծված բժշկական անձեռոցիկներ, մանրէազերծված և ոչ մանրէազերծված բժշկական վիրակապեր արտադրող;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, ",
+      "sizes": [
+        {
+          "height": 16,
+          "width": 10
+        },
+        {
+          "height": 14,
+          "width": 7
+        },
+        {
+          "height": 10,
+          "width": 5
+        }
+      ],
+      "layers": 8,
+      "packs": 10,
+      "isSterile": false,
+      "image": "/assets/toper.png",
+      "category": "toper"
+    },
+    {
+      "id": 6,
+      "title": "բժշկական անձեռոցիկ ՍՏԵՐԻԼ (ինդիվիդուալ)",
+      "body": "Բինտեր, թանզիֆե մանրէազերծված բժշկական անձեռոցիկներ, մանրէազերծված և ոչ մանրէազերծված բժշկական վիրակապեր արտադրող;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, ",
+      "sizes": [
+        {
+          "height": 16,
+          "width": 10
+        },
+        {
+          "height": 14,
+          "width": 7
+        },
+        {
+          "height": 10,
+          "width": 5
+        }
+      ],
+      "layers": 8,
+      "packs": 10,
+      "isSterile": true,
+      "image": "/assets/drug.png",
+      "category": "binter"
+    }
+  ],
+  "footer": {
+    "products": [
+      {
+        "pathname": "ՀԵՂՈՒԿՆԵՐ",
+        "path": "/hexukner"
+      },
+      {
+        "pathname": "ՔՍՈՒՔՆԵՐ",
+        "path": "/qsukner"
+      },
+      {
+        "pathname": "ՅՈՒՂԵՐ",
+        "path": "/yuxer"
+      },
+      {
+        "pathname": "ՈԳԵԹՈՒՐՄԵՐ",
+        "path": "/vogeturmer"
+      },
+      {
+        "pathname": "ՓՈՇԻՆԵՐ",
+        "path": "/poshiner"
+      },
+      {
+        "pathname": "ՄԱՇԿԻ ԽՆԱՄՔԻ ՄԻՋՈՑՆԵՐ",
+        "path": "/mashki-xnamqi-mijocner"
+      }
+    ]
+  },
+  "product-categories": [
+    {
+      "pathname": "Բոլորը",
+      "path": "/all"
+    },
+    {
+      "pathname": "Բինտեր",
+      "path": "/binter"
+    },
+    {
+      "pathname": "թանզիֆՆԵՐ",
+      "path": "/tanzifner"
+    },
+    {
+      "pathname": "անձեռոցիկներ",
+      "path": "/andzerocikner"
+    },
+    {
+      "pathname": "ԹՈՓԵՐ",
+      "path": "/toper"
+    }
+  ]
+}
