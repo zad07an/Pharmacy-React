@@ -1,8 +1,10 @@
+import { memo } from "react";
 import Image from "../components/ui/Image";
 import SingleProductSkeleton from "../components/single-product-skeleton/SingleProductSkeleton";
 import singleProductWrapper from "../HOC/singleProductWrapper";
 
 const SingleProduct = singleProductWrapper(({ isLoading, drug, handleSelectSize, sizeIndex }) => {
+  console.log("SingleProduct page rendering");
   return (
     <section className="w-full min-h-screen flex items-center flex-col pb-20 pt-20">
       {isLoading ? (
@@ -61,4 +63,4 @@ const SingleProduct = singleProductWrapper(({ isLoading, drug, handleSelectSize,
   );
 });
 
-export default SingleProduct;
+export default memo(SingleProduct);

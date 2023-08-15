@@ -1,7 +1,9 @@
+import { memo } from "react";
 import aboutWrapper from "../HOC/aboutWrapper";
 import Image from "../components/ui/Image";
 
 const About = aboutWrapper(() => {
+  console.log("About page rendering");
   return (
     <section className=" w-full min-h-screen lg:px-20 md:px10 px-5 flex items-center flex-col gap-20 lg:pb-56 pb-32 pt-24">
       <div className=" mt-10">
@@ -67,4 +69,4 @@ const About = aboutWrapper(() => {
   );
 });
 
-export default About;
+export default memo(About);
