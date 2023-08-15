@@ -13,10 +13,10 @@ function Footer() {
         <div className=" w-32 aspect-video">
           <Image src="/assets/footer-logo.svg" />
         </div>
-        <div className=" grid grid-cols-2 gap-6">
+        <div className=" grid xs:grid-cols-2 gap-6">
           <div>
             <div className=" mb-6">
-              <h2 className=" font-semibold text-xl">ԱՐՏԱԴՐԱՆՔ</h2>
+              <h2 className=" font-semibold xxs:text-xl text-lg">ԱՐՏԱԴՐԱՆՔ</h2>
             </div>
             <ul className=" ml-4 flex items-start flex-col list-disc">
               {isLoading
@@ -32,7 +32,7 @@ function Footer() {
           </div>
           <div>
             <div className=" mb-6">
-              <h2 className=" font-semibold text-xl">ԿԱՊ ՄԵԶ ՀԵՏ</h2>
+              <h2 className=" font-semibold xxs:text-xl text-lg">ԿԱՊ ՄԵԶ ՀԵՏ</h2>
             </div>
             <div className=" flex items-start flex-col gap-2 text-sm">
               <div className=" flex items-center gap-2">
@@ -52,22 +52,22 @@ function Footer() {
         </div>
         <div className=" flex items-center flex-col text-center">
           <div className=" mb-6">
-            <h2 className=" font-semibold text-xl">ՓՆՏՐԵՔ ՄԵԶ։</h2>
+            <h2 className=" font-semibold xxs:text-xl text-lg">ՓՆՏՐԵՔ ՄԵԶ։</h2>
           </div>
           <div className=" flex items-center gap-4">
             <Link to="">
-              <Image src="/assets/instagram.svg" />
+              <Image src="/assets/instagram.svg" className=" xxs:w-fit w-8" />
             </Link>
             <Link to="">
-              <Image src="/assets/twitter.svg" />
+              <Image src="/assets/twitter.svg" className=" xxs:w-fit w-8" />
             </Link>
             <Link to="">
-              <Image src="/assets/facebook.svg" />
+              <Image src="/assets/facebook.svg" className=" xxs:w-fit w-8" />
             </Link>
           </div>
         </div>
       </section>
-      <section className=" w-full text-center py-4">
+      <section className=" w-full text-center py-4 xxs:text-base text-sm">
         <p>By ArmCoding - © 2022 Բոլոր իրավունքները պաշտպանված են</p>
       </section>
     </footer>

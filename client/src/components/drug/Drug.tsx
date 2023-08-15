@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { DrugProps } from "../../lib/models";
 import Image from "../ui/Image";
+import Button from "../ui/Button";
 
 interface Props {
   drug: DrugProps;
@@ -14,14 +15,14 @@ function Drug({ drug }: Props) {
       <section
         className={` ${
           drug?.isSterile ? "flex" : "hidden"
-        } items-center justify-center text-white absolute lg:-top-24 lg:-right-24 md:-top-20 md:-right-20 sm:-top-14 sm:-right-14 -top-24 -right-24 z-10 w-3/4 aspect-square font-semibold`}
+        } items-center justify-center text-white absolute lg:-top-24 lg:-right-24 md:-top-20 md:-right-20 sm:-top-14 sm:-right-14 xs:-top-28 xs:-right-28 xxs:-top-20 xxs:-right-20 xxxs:-top-16 xxxs:-right-16 -top-12 -right-12  z-10 w-3/4 aspect-square font-semibold`}
       >
         <div className="flex items-center justify-center bg-green-1 w-full h-fit rotate-45 py-1">
           <p className=" uppercase">ՍՏԵՐԻԼ</p>
         </div>
       </section>
-      <section className=" w-fit aspect-video flex items-center justify-center">
-        <Image src={drug?.image} className=" h-64" />
+      <section className=" sm:w-full w-64 h-64 aspect-video flex items-center justify-center">
+        <Image src={drug?.image} />
       </section>
       <section className=" text-start">
         <h2 className="uppercase font-semibold">{drug?.title}</h2>
@@ -42,12 +43,9 @@ function Drug({ drug }: Props) {
           {drug?.packs} հատ
         </div>
       </section>
-      <button
-        className=" px-8 py-4 rounded-lg bg-green-1 uppercase text-white"
-        onClick={() => navigate(`/products/product/${drug?.category}/${drug?.id}`)}
-      >
+      <Button onClick={() => navigate(`/products/product/${drug?.category}/${drug?.id}`)}>
         ՏԵՍՆԵԼ Ավելին
-      </button>
+      </Button>
     </article>
   );
 }

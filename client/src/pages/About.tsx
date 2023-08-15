@@ -1,21 +1,24 @@
 import { memo } from "react";
 import aboutWrapper from "../HOC/aboutWrapper";
 import Image from "../components/ui/Image";
+import Subtitle from "../components/ui/Subtitle";
+import Paragraph from "../components/ui/Paragraph";
+import Container from "../components/ui/Container";
 
 const About = aboutWrapper(() => {
   return (
-    <section className=" w-full min-h-screen lg:px-20 md:px10 px-5 flex items-center flex-col gap-20 lg:pb-56 pb-32 pt-24">
-      <h2 className=" mt-10 text-4xl font-semibold text-green-1 uppercase">ՄԵՐ ՄԱՍԻՆ</h2>
+    <Container className=" lg:px-20 md:px10 px-5 gap-20 lg:pb-56 pb-32 pt-24">
+      <Subtitle className=" mt-10">ՄԵՐ ՄԱՍԻՆ</Subtitle>
       <div className=" w-full grid lg:grid-cols-2 lg:gap-10 gap-20 items-start lg:mb-40 xs:mt-0 mt-10">
         <div className=" w-full flex items-center justify-center">
           <div className=" w-fit aspect-video relative">
             <Image src="/assets/image3.png" />
-            <div className=" absolute lg:-bottom-60 -bottom-20 -left-44 -z-10">
+            <div className=" sm:w-fit w-64 absolute lg:-bottom-60 -bottom-20 -left-44 -z-10">
               <Image src="/assets/Ellipse 1.svg" className=" w-auto h-auto rotate-90" />
             </div>
           </div>
         </div>
-        <p>
+        <Paragraph className="lg:mt-0 mt-10">
           Բինտեր, թանզիֆե մանրէազերծված բժշկական անձեռոցիկներ, մանրէազերծված և ոչ մանրէազերծված
           բժշկական վիրակապեր արտադրող;Lorem Ipsum is simply dummy text of the printing and
           typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
@@ -31,10 +34,10 @@ const About = aboutWrapper(() => {
           It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
           passages, and more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
-        </p>
+        </Paragraph>
       </div>
       <div className=" w-full grid lg:grid-cols-2 gap-10 items-start lg:mt-0 xs:mt-0 mt-20">
-        <p className="lg:order-1 order-2">
+        <Paragraph className=" lg:mt-0 mt-10 lg:order-1 order-2">
           Բինտեր, թանզիֆե մանրէազերծված բժշկական անձեռոցիկներ, մանրէազերծված և ոչ մանրէազերծված
           բժշկական վիրակապեր արտադրող;Lorem Ipsum is simply dummy text of the printing and
           typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
@@ -50,17 +53,17 @@ const About = aboutWrapper(() => {
           It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
           passages, and more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
-        </p>
+        </Paragraph>
         <div className=" w-full flex items-center justify-center lg:order-2 order-1 lg:mb-0 mb-10">
           <div className=" w-fit relative">
             <Image src="/assets/image4.png" />
-            <div className=" w-fit absolute lg:-bottom-40 -bottom-20 -right-5 -z-10">
-              <Image src="/assets/Ellipse 1.svg" className=" w-auto h-auto rotate-[26deg]" />
+            <div className=" sm:w-fit w-56 absolute lg:-bottom-40 -bottom-20 -right-5 -z-10">
+              <Image src="/assets/Ellipse 1.svg" className=" rotate-[26deg]" />
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </Container>
   );
 });
 

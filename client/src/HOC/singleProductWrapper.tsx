@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import useFetch from "../hooks/useFetch";
 import { DrugProps } from "../lib/models";
 import { useParams } from "react-router-dom";
@@ -16,7 +16,7 @@ function singleProductWrapper(Component: React.FC<SingleProductProps>) {
     const [sizeIndex, setSizeIndex] = useState<number>(0);
     const { isLoading, data: drug } = useFetch<DrugProps>("http://localhost:8080/drugs/" + id);
 
-    const handleSelectSize = useCallback((index: number) => setSizeIndex(index), []);
+    const handleSelectSize = (index: number) => setSizeIndex(index);
 
     return (
       <Component

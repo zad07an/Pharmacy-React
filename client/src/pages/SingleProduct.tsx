@@ -2,20 +2,25 @@ import { memo } from "react";
 import Image from "../components/ui/Image";
 import SingleProductSkeleton from "../components/single-product-skeleton/SingleProductSkeleton";
 import singleProductWrapper from "../HOC/singleProductWrapper";
+import Subtitle from "../components/ui/Subtitle";
+import Paragraph from "../components/ui/Paragraph";
+import Container from "../components/ui/Container";
 
 const SingleProduct = singleProductWrapper(({ isLoading, drug, handleSelectSize, sizeIndex }) => {
   return (
-    <section className="w-full min-h-screen flex items-center flex-col pb-20 pt-20">
+    <Container className=" py-20">
       {isLoading ? (
         <SingleProductSkeleton />
       ) : (
         <div className=" w-full grid lg:grid-cols-2 gap-10">
-          <div className=" w-fit aspect-video flex items-center justify-self-center rounded-2xl p-28 bg-gray-1 relative overflow-hidden">
-            <Image src={drug?.image} />
+          <div className=" sm:w-fit w-full aspect-video flex items-center justify-center justify-self-center rounded-2xl p-28 bg-gray-1 relative overflow-hidden">
+            <section className=" sm:w-fit min-w-[220px] aspect-video">
+              <Image src={drug?.image} />
+            </section>
             <div
               className={` ${
                 drug?.isSterile ? "flex" : "hidden"
-              } items-center justify-center text-white absolute sm:-top-40 sm:-right-40 xs:-top-32 xs:-right-32 -top-20 -right-20 z-10 w-3/4 aspect-square font-semibold`}
+              } items-center justify-center text-white absolute sm:-top-40 sm:-right-40 xs:-top-32 xs:-right-32 xxs:-top-20 xxs:-right-20 -top-14 -right-14 z-10 w-3/4 aspect-square font-semibold`}
             >
               <div className="flex items-center justify-center bg-green-1 w-full h-fit rotate-45 py-1">
                 <p className=" uppercase">ՍՏԵՐԻԼ</p>
@@ -23,7 +28,7 @@ const SingleProduct = singleProductWrapper(({ isLoading, drug, handleSelectSize,
             </div>
           </div>
           <div className=" flex items-start flex-col gap-6">
-            <h2 className=" text-3xl text-green-1 font-semibold uppercase">{drug?.title}</h2>
+            <Subtitle className=" uppercase">{drug?.title}</Subtitle>
             <div className=" flex items-center justify-start flex-wrap gap-6">
               {drug?.sizes?.map((size, index: number) => (
                 <div
@@ -50,11 +55,11 @@ const SingleProduct = singleProductWrapper(({ isLoading, drug, handleSelectSize,
                 {drug?.packs} հատ
               </div>
             </div>
-            <p>{drug?.body}</p>
+            <Paragraph>{drug?.body}</Paragraph>
           </div>
         </div>
       )}
-    </section>
+    </Container>
   );
 });
 

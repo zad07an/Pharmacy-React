@@ -11,3 +11,7 @@
     font-family: "Poppins", sans-serif;
   }
 }
+
+.active {
+  @apply text-green-1;
+}

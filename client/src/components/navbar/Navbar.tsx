@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import Image from "../ui/Image";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import LinkSkeleton from "../ui/LinkSkeleton";
 import { CgMenuRight } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import useClickOutside from "../../hooks/useClickOutside";
 import Overlay from "../ui/Overlay";
 import { NavbarLinkProps } from "../../lib/models";
@@ -12,12 +12,11 @@ import useFetch from "../../hooks/useFetch";
 
 function Navbar() {
   const { isLoading, data: links } = useFetch<NavbarLinkProps[]>("http://localhost:8080/navbar");
-  const { pathname }: { pathname: string } = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const menuRef = useRef<HTMLUListElement | null>(null);
 
-  const handleOpenMenu = useCallback(() => setIsMenuOpen(true), []);
-  const handleCloseMenu = useCallback(() => setIsMenuOpen(false), []);
+  const handleOpenMenu = () => setIsMenuOpen(true);
+  const handleCloseMenu = () => setIsMenuOpen(false);
 
   useClickOutside(menuRef, handleCloseMenu);
 
@@ -47,12 +46,7 @@ function Navbar() {
               <li key={index}>
                 <NavLink
                   to={link?.path === "/products" ? link?.path + "/all" : link?.path}
-                  className={` ${
-                    (pathname.includes(link?.path) && link?.path.length > 1) ||
-                    pathname === link?.path
-                      ? "text-green-1"
-                      : "text-black"
-                  } font-semibold`}
+                  className={` xs:text-base text-sm font-semibold`}
                   onClick={handleCloseMenu}
                 >
                   {link.pathname}
