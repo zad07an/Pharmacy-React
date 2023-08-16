@@ -7,7 +7,7 @@ type FetchState<T> = {
   error: Error | null;
 };
 
-function useFetch<T>(url: string): FetchState<T> {
+function useFetch<T>(endpoint: string): FetchState<T> {
   const [fetchState, setFetchState] = useState<FetchState<T>>({
     data: null,
     isLoading: true,
@@ -18,7 +18,7 @@ function useFetch<T>(url: string): FetchState<T> {
     let isMounted = true;
     const fetchData = async () => {
       try {
-        const res = await axios.get(`${import.meta.env.VITE_API_URL}/${url}`);
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/${endpoint}`);
         if (res.statusText !== "OK") {
           throw new Error("Network response was not OK");
         }
@@ -39,7 +39,7 @@ function useFetch<T>(url: string): FetchState<T> {
     return () => {
       isMounted = false;
     };
-  }, [url]);
+  }, [endpoint]);
 
   return fetchState;
 }
