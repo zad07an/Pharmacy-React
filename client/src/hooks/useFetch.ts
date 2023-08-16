@@ -18,7 +18,7 @@ function useFetch<T>(url: string): FetchState<T> {
     let isMounted = true;
     const fetchData = async () => {
       try {
-        const res = await axios.get(url);
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/${url}`);
         if (res.statusText !== "OK") {
           throw new Error("Network response was not OK");
         }

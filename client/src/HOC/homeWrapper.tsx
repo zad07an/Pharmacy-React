@@ -12,7 +12,7 @@ interface HomeProps {
 function homeWrapper(Component: React.FC<HomeProps>) {
   return () => {
     const navigate = useNavigate();
-    const { isLoading, data: drugs } = useFetch<DrugProps[]>("http://localhost:8080/drugs");
+    const { isLoading, data: drugs } = useFetch<DrugProps[]>("drugs");
 
     return <Component isLoading={isLoading} drugs={drugs} navigate={navigate} />;
   };

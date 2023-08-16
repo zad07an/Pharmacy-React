@@ -14,7 +14,7 @@ function singleProductWrapper(Component: React.FC<SingleProductProps>) {
   return () => {
     const { id } = useParams();
     const [sizeIndex, setSizeIndex] = useState<number>(0);
-    const { isLoading, data: drug } = useFetch<DrugProps>("http://localhost:8080/drugs/" + id);
+    const { isLoading, data: drug } = useFetch<DrugProps>("drugs/" + id);
 
     const handleSelectSize = (index: number) => setSizeIndex(index);
 

@@ -12,7 +12,7 @@ import useFetch from "../../hooks/useFetch";
 import useHideScrollBar from "../../hooks/useHideScrollBar";
 
 function Navbar() {
-  const { isLoading, data: links } = useFetch<NavbarLinkProps[]>("http://localhost:8080/navbar");
+  const { isLoading, data: links } = useFetch<NavbarLinkProps[]>("navbar");
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const menuRef = useRef<HTMLUListElement | null>(null);
 

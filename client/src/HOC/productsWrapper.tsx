@@ -11,7 +11,7 @@ interface ProductsProps {
 function productsWrapper(Component: React.FC<ProductsProps>) {
   return () => {
     const { categoryId } = useParams();
-    const { isLoading, data: drugs } = useFetch<DrugProps[]>("http://localhost:8080/drugs");
+    const { isLoading, data: drugs } = useFetch<DrugProps[]>("drugs");
 
     const filteredProducts = useMemo(() => {
       return categoryId !== "all" ? drugs?.filter(drug => drug?.category === categoryId) : drugs;

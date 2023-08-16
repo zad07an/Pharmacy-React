@@ -5,7 +5,7 @@ import useFetch from "../../hooks/useFetch";
 import LinkSkeleton from "../ui/LinkSkeleton";
 
 function Footer() {
-  const { isLoading, data: links } = useFetch<FooterLinkProps>("http://localhost:8080/footer");
+  const { isLoading, data: links } = useFetch<FooterLinkProps>("footer");
 
   return (
     <footer className=" w-full bg-green-1 text-white lg:px-20 sm:p-10 sm:pb-0 p-5">

@@ -4,9 +4,7 @@ import { CategoryLinkProps } from "../../lib/models";
 import LinkSkeleton from "../ui/LinkSkeleton";
 
 function ProductsNavbar() {
-  const { isLoading, data: links } = useFetch<CategoryLinkProps[]>(
-    "http://localhost:8080/product-categories"
-  );
+  const { isLoading, data: links } = useFetch<CategoryLinkProps[]>("product-categories");
 
   return (
     <nav className=" w-full flex items-center justify-center">
