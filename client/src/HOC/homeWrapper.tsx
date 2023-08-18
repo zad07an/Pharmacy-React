@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { DrugProps } from "../lib/models";
 import useFetch from "../hooks/useFetch";
 import { NavigateFunction, useNavigate } from "react-router-dom";
-import useClickOutside from "../hooks/useClickOutside";
 import { usePharmacyContext } from "../context/PharmacyProvider";
 
 interface HomeProps {

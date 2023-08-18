@@ -8,10 +8,8 @@ import Button from "../components/ui/Button";
 import Subtitle from "../components/ui/Subtitle";
 import Paragraph from "../components/ui/Paragraph";
 import Container from "../components/ui/Container";
-import SuccessModal from "../components/modals/SuccessModal";
-import Overlay from "../components/ui/Overlay";
 
-const Home = homeWrapper(({ isLoading, drugs, navigate, isSuccess, handleOpenModal }) => {
+const Home = homeWrapper(({ isLoading, drugs, navigate, handleOpenModal }) => {
   return (
     <Container className=" lg:px-20 md:px-10 px-5 pb-20">
       <section className=" w-full h-screen grid lg:grid-cols-2 lg:p-0 pt-28 lg:gap-0 gap-10 items-center">

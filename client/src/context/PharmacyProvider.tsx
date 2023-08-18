@@ -1,7 +1,6 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 import SuccessModal from "../components/modals/SuccessModal";
 import Overlay from "../components/ui/Overlay";
-import useHideScrollBar from "../hooks/useHideScrollBar";
 
 interface ProviderContext {
   children: ReactNode;
