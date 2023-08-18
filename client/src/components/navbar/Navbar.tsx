@@ -4,22 +4,18 @@ import { NavLink } from "react-router-dom";
 import LinkSkeleton from "../ui/LinkSkeleton";
 import { CgMenuRight } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
-import { useState } from "react";
 import useClickOutside from "../../hooks/useClickOutside";
-import Overlay from "../ui/Overlay";
 import { NavbarLinkProps } from "../../lib/models";
 import useFetch from "../../hooks/useFetch";
 import useHideScrollBar from "../../hooks/useHideScrollBar";
+import { usePharmacyContext } from "../../context/PharmacyProvider";
 
 function Navbar() {
   const { isLoading, data: links } = useFetch<NavbarLinkProps[]>("navbar");
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const menuRef = useRef<HTMLUListElement | null>(null);
+  const { handleOpenNavbarMenu, handleCloseNavbarMenu, isMenuOpen } = usePharmacyContext();
 
-  const handleOpenMenu = () => setIsMenuOpen(true);
-  const handleCloseMenu = () => setIsMenuOpen(false);
-
-  useClickOutside(menuRef, handleCloseMenu);
+  useClickOutside(menuRef, handleCloseNavbarMenu);
   useHideScrollBar(isMenuOpen);
 
   return (
@@ -27,7 +23,6 @@ function Navbar() {
       <NavLink to="/" className=" w-24 aspect-video">
         <Image src="/assets/logo.svg" />
       </NavLink>
-      <div className=" lg:hidden">{isMenuOpen ? <Overlay /> : null}</div>
       <ul
         ref={menuRef}
         className={` ${
@@ -38,7 +33,10 @@ function Navbar() {
           <div className=" w-16 aspect-video">
             <Image src="/assets/logo.svg" />
           </div>
-          <button className=" flex items-center justify-center text-3xl" onClick={handleCloseMenu}>
+          <button
+            className=" flex items-center justify-center text-3xl"
+            onClick={handleCloseNavbarMenu}
+          >
             <IoClose />
           </button>
         </li>
@@ -49,7 +47,7 @@ function Navbar() {
                 <NavLink
                   to={link?.path === "/products" ? link?.path + "/all" : link?.path}
                   className={` xs:text-base text-sm font-semibold`}
-                  onClick={handleCloseMenu}
+                  onClick={handleCloseNavbarMenu}
                 >
                   {link.pathname}
                 </NavLink>
@@ -63,7 +61,7 @@ function Navbar() {
       </ul>
       <button
         className=" lg:hidden flex items-center justify-center cursor-pointer text-3xl"
-        onClick={handleOpenMenu}
+        onClick={handleOpenNavbarMenu}
       >
         <CgMenuRight />
       </button>

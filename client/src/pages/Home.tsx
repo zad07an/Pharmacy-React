@@ -8,10 +8,12 @@ import Button from "../components/ui/Button";
 import Subtitle from "../components/ui/Subtitle";
 import Paragraph from "../components/ui/Paragraph";
 import Container from "../components/ui/Container";
+import SuccessModal from "../components/modals/SuccessModal";
+import Overlay from "../components/ui/Overlay";
 
-const Home = homeWrapper(({ isLoading, drugs, navigate }) => {
+const Home = homeWrapper(({ isLoading, drugs, navigate, isSuccess, handleOpenModal }) => {
   return (
-    <Container className=" lg:px-20 md:px10 px-5 pb-20">
+    <Container className=" lg:px-20 md:px-10 px-5 pb-20">
       <section className=" w-full h-screen grid lg:grid-cols-2 lg:p-0 pt-28 lg:gap-0 gap-10 items-center">
         <div className=" w-full flex lg:items-start lg:justify-start items-center justify-center flex-col gap-6 lg:p-0 lg:pr-32 sm:px-20 lg:text-start text-center">
           <h1 className=" font-semibold text-green-1 xs:text-4xl text-3xl">ԱՌԱՋԻՆԸ ՀԱՅԱՍՏԱՆՈՒՄ</h1>
@@ -47,7 +49,7 @@ const Home = homeWrapper(({ isLoading, drugs, navigate }) => {
         <div className=" w-full flex lg:items-start lg:justify-start items-center justify-center flex-col gap-6 lg:p-0 lg:pr-32 sm:px-20 lg:text-start text-center">
           <Subtitle>ԲԺՇԿԱԿԱՆ ՊԱՐԱԳԱՆԵՐԻ ՍՏԵՐԻԼԻԶԱՑՈՒՄ</Subtitle>
           <p>Մենք առաջարկում ենք ԲԺՇԿԱԿԱՆ ՊԱՐԱԳԱՆԵՐԻ ՍՏԵՐԻԼԻԶԱՑՈՒՄ</p>
-          <Button>ԿԱՐԴԱԼ ԱՎԵԼԻՆ</Button>
+          <Button onClick={() => navigate("/services")}>ԿԱՐԴԱԼ ԱՎԵԼԻՆ</Button>
         </div>
         <div className=" flex items-center justify-center">
           <div className=" aspect-video relative">
@@ -79,7 +81,9 @@ const Home = homeWrapper(({ isLoading, drugs, navigate }) => {
                 </div>
               ))}
         </div>
-        <Button className=" mt-10">ՏԵՍՆԵԼ ԱՄԲՈՂՋԸ</Button>
+        <Button className=" mt-10" onClick={() => navigate("/partners")}>
+          ՏԵՍՆԵԼ ԱՄԲՈՂՋԸ
+        </Button>
       </section>
       <section className=" w-full h-fit grid lg:grid-cols-2 lg:p-0 pt-10 lg:gap-0 gap-10 items-start lg:mt-20 mt-10">
         <div className=" flex items-center flex-col md:gap-0 gap-10">
@@ -121,7 +125,9 @@ const Home = homeWrapper(({ isLoading, drugs, navigate }) => {
               className=" w-full resize-none rounded-xl bg-gray-1 sm:px-10 px-5 py-10"
             ></textarea>
             <div className=" w-full flex items-center justify-start">
-              <Button>ԿԱՐԴԱԼ ԱՎԵԼԻՆ</Button>
+              <Button type="button" onClick={handleOpenModal}>
+                ՈՒՂԱՐԿԵԼ
+              </Button>
             </div>
           </form>
         </div>

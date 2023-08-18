@@ -7,7 +7,7 @@ import Container from "../components/ui/Container";
 
 const About = aboutWrapper(() => {
   return (
-    <Container className=" lg:px-20 md:px10 px-5 gap-20 lg:pb-56 pb-32 pt-24">
+    <Container className=" lg:px-20 md:px-10 px-5 gap-20 lg:pb-56 pb-32 pt-24">
       <Subtitle className=" mt-10">ՄԵՐ ՄԱՍԻՆ</Subtitle>
       <div className=" w-full grid lg:grid-cols-2 lg:gap-10 gap-20 items-start lg:mb-40 xs:mt-0 mt-10">
         <div className=" w-full flex items-center justify-center">

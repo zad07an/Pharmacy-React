@@ -26,3 +26,7 @@ export interface CategoryLinkProps {
   pathname: string;
   path: string;
 }
+
+export interface PartnerProps {
+  image: string;
+}

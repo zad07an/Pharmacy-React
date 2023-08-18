@@ -199,6 +199,26 @@
       }
     ]
   },
+  "partners": [
+    {
+      "image": "/assets/box-image.svg"
+    },
+    {
+      "image": "/assets/box-image.svg"
+    },
+    {
+      "image": "/assets/box-image.svg"
+    },
+    {
+      "image": "/assets/box-image.svg"
+    },
+    {
+      "image": "/assets/box-image.svg"
+    },
+    {
+      "image": "/assets/box-image.svg"
+    }
+  ],
   "product-categories": [
     {
       "pathname": "Բոլորը",
