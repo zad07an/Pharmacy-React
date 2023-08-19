@@ -8,23 +8,25 @@ export interface HomeProps {
   navigate: NavigateFunction;
   isLoading: boolean;
   drugs: DrugProps[] | null;
-  isSuccess: boolean;
+  isModalOpen: boolean;
   handleOpenModal: () => void;
+  handleCloseModal: () => void;
 }
 
 function homeWrapper(Component: React.FC<HomeProps>) {
   return () => {
     const navigate = useNavigate();
     const { isLoading, data: drugs } = useFetch<DrugProps[]>("drugs");
-    const { handleOpenModal, isSuccess } = usePharmacyContext();
+    const { handleOpenModal, isModalOpen, handleCloseModal } = usePharmacyContext();
 
     return (
       <Component
         isLoading={isLoading}
         drugs={drugs}
         navigate={navigate}
-        isSuccess={isSuccess}
+        isModalOpen={isModalOpen}
         handleOpenModal={handleOpenModal}
+        handleCloseModal={handleCloseModal}
       />
     );
   };
