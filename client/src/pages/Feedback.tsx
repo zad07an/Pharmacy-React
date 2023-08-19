@@ -6,16 +6,16 @@ import Button from "../components/ui/Button";
 import Container from "../components/ui/Container";
 import feedbackWrapper from "../HOC/feedbackWrapper";
 import Modal from "../components/modals/Modal";
-import { successContent } from "../components/modals/ModalContents";
+import SuccessContent from "../components/modals/modal-contents/SuccessContent";
 
 const Feedback = feedbackWrapper(({ handleOpenModal, isModalOpen, handleCloseModal }) => (
   <>
     <Modal
       title="ՇՆՈՐՀԱԿԱԼՈՒԹՅՈՒՆ"
-      description="ՄԵՐ ՄԱՍՆԱԳԵՏԸ ԿԱՊ ԿՀԱՍՏԱՏԻ ՁԵԶ ՀԵՏ"
+      description="ՄԵՐ ՄԱՍՆԱԳԵՏԸ ԿՊԱՏԱՍԽԱՆԻ ՁԵԶ ԷԼ․ՓՈՍՏԻ ՄԻՋՈՑՈՎ"
       isOpen={isModalOpen}
       onClose={handleCloseModal}
-      body={successContent}
+      body={<SuccessContent />}
     />
     <Container className=" lg:px-20 md:px-10 px-5 pb-20 pt-10">
       <section className=" w-full h-fit grid lg:grid-cols-2 lg:p-0 pt-10 lg:gap-0 gap-10 items-start lg:mt-20 mt-10">

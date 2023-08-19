@@ -1,4 +1,4 @@
-import { ReactElement, useRef } from "react";
+import { useRef, ReactNode } from "react";
 import { IoClose } from "react-icons/io5";
 import Subtitle from "../ui/Subtitle";
 import Paragraph from "../ui/Paragraph";
@@ -8,7 +8,7 @@ import cn from "../../utils/tailwindMerge";
 interface Props {
   title: string;
   description?: string;
-  body: ReactElement;
+  body: ReactNode;
   isOpen: boolean;
   onClose: () => void;
   className?: string;
@@ -31,7 +31,10 @@ function Modal({ title, description, body, isOpen, onClose, className }: Props) 
           className || ""
         )}
       >
-        <button className=" text-3xl absolute top-6 right-6 text-green-1" onClick={onClose}>
+        <button
+          className=" text-3xl absolute xs:top-6 xs:right-6 top-2 right-2 text-green-1"
+          onClick={onClose}
+        >
           <IoClose />
         </button>
         <header className=" flex items-center justify-center flex-col gap-6 text-center">

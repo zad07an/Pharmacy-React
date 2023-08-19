@@ -9,15 +9,15 @@ import Subtitle from "../components/ui/Subtitle";
 import Paragraph from "../components/ui/Paragraph";
 import Container from "../components/ui/Container";
 import Modal from "../components/modals/Modal";
-import { successContent } from "../components/modals/ModalContents";
+import SuccessContent from "../components/modals/modal-contents/SuccessContent";
 
 const Home = homeWrapper(
   ({ isLoading, drugs, navigate, handleOpenModal, isModalOpen, handleCloseModal }) => (
     <>
       <Modal
         title="ՇՆՈՐՀԱԿԱԼՈՒԹՅՈՒՆ"
-        description="ՄԵՐ ՄԱՍՆԱԳԵՏԸ ԿԱՊ ԿՀԱՍՏԱՏԻ ՁԵԶ ՀԵՏ"
-        body={successContent}
+        description="ՄԵՐ ՄԱՍՆԱԳԵՏԸ ԿՊԱՏԱՍԽԱՆԻ ՁԵԶ ԷԼ․ՓՈՍՏԻ ՄԻՋՈՑՈՎ"
+        body={<SuccessContent />}
         isOpen={isModalOpen}
         onClose={handleCloseModal}
       />

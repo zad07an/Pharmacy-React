@@ -34,8 +34,11 @@ export interface PartnerProps {
 export interface ContextProps {
   isModalOpen: boolean;
   isNavbarMenuOpen: boolean;
+  isCallModalOpen: boolean;
   handleOpenModal: () => void;
   handleCloseModal: () => void;
   handleOpenNavbarMenu: () => void;
   handleCloseNavbarMenu: () => void;
+  handleOrderCall: () => void;
+  handleCloseCallModal: () => void;
 }

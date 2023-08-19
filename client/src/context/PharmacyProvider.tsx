@@ -9,10 +9,13 @@ interface ProviderContext {
 const defaultValues = {
   isModalOpen: false,
   isNavbarMenuOpen: false,
+  isCallModalOpen: false,
   handleOpenModal: () => {},
   handleCloseModal: () => {},
   handleOpenNavbarMenu: () => {},
-  handleCloseNavbarMenu: () => {}
+  handleCloseNavbarMenu: () => {},
+  handleOrderCall: () => {},
+  handleCloseCallModal: () => {}
 };
 
 const PharmacyContext = createContext<ContextProps>(defaultValues);
@@ -20,24 +23,33 @@ const PharmacyContext = createContext<ContextProps>(defaultValues);
 function PharmacyProvider({ children }: ProviderContext) {
   const [isNavbarMenuOpen, setIsNavbarMenuOpen] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [isCallModalOpen, setIsCallModalOpen] = useState<boolean>(false);
 
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
   const handleOpenNavbarMenu = () => setIsNavbarMenuOpen(true);
   const handleCloseNavbarMenu = () => setIsNavbarMenuOpen(false);
+  const handleOrderCall = () => {
+    setIsCallModalOpen(true);
+    setIsModalOpen(false);
+  };
+  const handleCloseCallModal = () => setIsCallModalOpen(false);
 
   const contextValue: ContextProps = {
     isModalOpen,
     isNavbarMenuOpen,
+    isCallModalOpen,
     handleOpenModal,
     handleCloseModal,
     handleOpenNavbarMenu,
-    handleCloseNavbarMenu
+    handleCloseNavbarMenu,
+    handleOrderCall,
+    handleCloseCallModal
   };
 
   return (
     <PharmacyContext.Provider value={contextValue}>
-      {isModalOpen ? <Overlay /> : null}
+      {isModalOpen || isCallModalOpen ? <Overlay /> : null}
       {children}
     </PharmacyContext.Provider>
   );
