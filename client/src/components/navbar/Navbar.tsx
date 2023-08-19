@@ -13,10 +13,10 @@ import { usePharmacyContext } from "../../context/PharmacyProvider";
 function Navbar() {
   const { isLoading, data: links } = useFetch<NavbarLinkProps[]>("navbar");
   const menuRef = useRef<HTMLUListElement | null>(null);
-  const { handleOpenNavbarMenu, handleCloseNavbarMenu, isMenuOpen } = usePharmacyContext();
+  const { handleOpenNavbarMenu, handleCloseNavbarMenu, isNavbarMenuOpen } = usePharmacyContext();
 
   useClickOutside(menuRef, handleCloseNavbarMenu);
-  useHideScrollBar(isMenuOpen);
+  useHideScrollBar(isNavbarMenuOpen);
 
   return (
     <nav className=" fixed left-0 w-full h-20 flex items-center justify-between lg:px-20 md:px-10 px-5 bg-white shadow-md z-50">
@@ -26,7 +26,7 @@ function Navbar() {
       <ul
         ref={menuRef}
         className={` ${
-          isMenuOpen ? "right-0" : "right-[-100%]"
+          isNavbarMenuOpen ? "right-0" : "right-[-100%]"
         } lg:w-fit lg:h-fit h-screen lg:flex-row lg:static absolute right-0 top-0 md:w-1/3 sm:w-1/2 w-3/4 flex flex-col lg:items-center items-start gap-5 lg:p-0 p-4 pt-0 bg-inherit lg:border-none border-l border-gray-500 transition-all duration-300`}
       >
         <li className=" w-full lg:hidden flex items-center justify-between h-20">

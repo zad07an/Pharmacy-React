@@ -8,22 +8,31 @@ interface ProviderContext {
 
 const defaultValues = {
   isModalOpen: false,
+  isNavbarMenuOpen: false,
   handleOpenModal: () => {},
-  handleCloseModal: () => {}
+  handleCloseModal: () => {},
+  handleOpenNavbarMenu: () => {},
+  handleCloseNavbarMenu: () => {}
 };
 
 const PharmacyContext = createContext<ContextProps>(defaultValues);
 
 function PharmacyProvider({ children }: ProviderContext) {
+  const [isNavbarMenuOpen, setIsNavbarMenuOpen] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
+  const handleOpenNavbarMenu = () => setIsNavbarMenuOpen(true);
+  const handleCloseNavbarMenu = () => setIsNavbarMenuOpen(false);
 
   const contextValue: ContextProps = {
     isModalOpen,
+    isNavbarMenuOpen,
     handleOpenModal,
-    handleCloseModal
+    handleCloseModal,
+    handleOpenNavbarMenu,
+    handleCloseNavbarMenu
   };
 
   return (

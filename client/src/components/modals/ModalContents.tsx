@@ -4,7 +4,7 @@ import Image from "../ui/Image";
 
 export const formContent: ReactElement = (
   <form className=" w-full flex items-center flex-col gap-6">
-    <div className=" grid sm:grid-cols-2 gap-6">
+    <div className=" w-full grid xs:grid-cols-2 gap-6">
       <input
         type="text"
         className=" w-full sm:px-10 px-5 h-14 rounded-xl bg-gray-1"
