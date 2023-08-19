@@ -1,10 +1,10 @@
+import { memo } from "react";
 import Paragraph from "../components/ui/Paragraph";
 import Image from "../components/ui/Image";
 import Subtitle from "../components/ui/Subtitle";
 import Button from "../components/ui/Button";
 import Container from "../components/ui/Container";
-import feedbackWrapper, { FeedbackProps } from "../HOC/feedbackWrapper";
-import useMyMemo from "../hooks/useMyMemo";
+import feedbackWrapper from "../HOC/feedbackWrapper";
 
 const Feedback = feedbackWrapper(({ handleOpenModal }) => {
   return (
@@ -60,4 +60,4 @@ const Feedback = feedbackWrapper(({ handleOpenModal }) => {
   );
 });
 
-export default useMyMemo<FeedbackProps>(Feedback);
+export default memo(Feedback);

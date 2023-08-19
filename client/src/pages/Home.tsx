@@ -1,13 +1,13 @@
+import { memo } from "react";
 import Image from "../components/ui/Image";
 import Drug from "../components/drug/Drug";
 import DrugSkeleton from "../components/drug/DrugSkeleton";
 import Skeleton from "react-loading-skeleton";
-import homeWrapper, { HomeProps } from "../HOC/homeWrapper";
+import homeWrapper from "../HOC/homeWrapper";
 import Button from "../components/ui/Button";
 import Subtitle from "../components/ui/Subtitle";
 import Paragraph from "../components/ui/Paragraph";
 import Container from "../components/ui/Container";
-import useMyMemo from "../hooks/useMyMemo";
 
 const Home = homeWrapper(({ isLoading, drugs, navigate, handleOpenModal }) => {
   return (
@@ -134,4 +134,4 @@ const Home = homeWrapper(({ isLoading, drugs, navigate, handleOpenModal }) => {
   );
 });
 
-export default useMyMemo<HomeProps>(Home);
+export default memo(Home);

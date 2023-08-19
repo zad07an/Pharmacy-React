@@ -1,10 +1,10 @@
+import { memo } from "react";
 import Image from "../components/ui/Image";
 import SingleProductSkeleton from "../components/single-product-skeleton/SingleProductSkeleton";
-import singleProductWrapper, { SingleProductProps } from "../HOC/singleProductWrapper";
+import singleProductWrapper from "../HOC/singleProductWrapper";
 import Subtitle from "../components/ui/Subtitle";
 import Paragraph from "../components/ui/Paragraph";
 import Container from "../components/ui/Container";
-import useMyMemo from "../hooks/useMyMemo";
 
 const SingleProduct = singleProductWrapper(({ isLoading, drug, handleSelectSize, sizeIndex }) => {
   return (
@@ -63,4 +63,4 @@ const SingleProduct = singleProductWrapper(({ isLoading, drug, handleSelectSize,
   );
 });
 
-export default useMyMemo<SingleProductProps>(SingleProduct);
+export default memo(SingleProduct);

@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Paragraph from "../components/ui/Paragraph";
 import Image from "../components/ui/Image";
 import Subtitle from "../components/ui/Subtitle";
@@ -75,4 +76,4 @@ const Services = servicesWrapper(() => {
   );
 });
 
-export default Services;
+export default memo(Services);
