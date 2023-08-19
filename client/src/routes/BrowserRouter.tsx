@@ -22,7 +22,7 @@ function BrowserRouter() {
     createRoutesFromElements(
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<About />} />
+        <Route path="/about-us" element={<About />} errorElement={<NotFound />} />
         <Route path="/products" element={<ProductsLayout />}>
           <Route path={`:categoryId` || "all"} element={<Products />} />
           <Route path=":categoryId/:product/:id" element={<SingleProduct />} />

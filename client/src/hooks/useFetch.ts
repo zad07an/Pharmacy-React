@@ -31,6 +31,7 @@ function useFetch<T>(endpoint: string): FetchState<T> {
         if (isMounted) {
           setFetchState({ data: null, isLoading: false, error });
         }
+        throw error;
       }
     };
 
