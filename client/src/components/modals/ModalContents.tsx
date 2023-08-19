@@ -36,7 +36,7 @@ export const formContent: ReactElement = (
   </form>
 );
 
-export const successContent = (
+export const successContent: ReactElement = (
   <div
     className=" w-32 aspect-square flex items-center justify-center mt-6"
     style={{ backgroundImage: `url("/assets/Ellipse 12.svg")`, backgroundSize: "cover" }}
