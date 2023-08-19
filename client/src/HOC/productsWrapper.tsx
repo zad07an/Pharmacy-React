@@ -3,7 +3,7 @@ import { DrugProps } from "../lib/models";
 import useFetch from "../hooks/useFetch";
 import { useParams } from "react-router-dom";
 
-interface ProductsProps {
+export interface ProductsProps {
   isLoading: boolean;
   filteredProducts: DrugProps[] | null | undefined;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { usePharmacyContext } from "../context/PharmacyProvider";
 
-interface FeedbackProps {
+export interface FeedbackProps {
   handleOpenModal: () => void;
 }
 

@@ -1,9 +1,9 @@
-import { memo } from "react";
 import Container from "../components/ui/Container";
-import partnersWrapper from "../HOC/partnersWrapper";
+import partnersWrapper, { PartnersProps } from "../HOC/partnersWrapper";
 import Image from "../components/ui/Image";
 import Skeleton from "react-loading-skeleton";
 import Subtitle from "../components/ui/Subtitle";
+import useMyMemo from "../hooks/useMyMemo";
 
 const Partners = partnersWrapper(({ isLoading, partners }) => {
   return (
@@ -32,4 +32,4 @@ const Partners = partnersWrapper(({ isLoading, partners }) => {
   );
 });
 
-export default memo(Partners);
+export default useMyMemo<PartnersProps>(Partners);

@@ -1,4 +1,3 @@
-import { memo } from "react";
 import aboutWrapper from "../HOC/aboutWrapper";
 import Image from "../components/ui/Image";
 import Subtitle from "../components/ui/Subtitle";
@@ -67,4 +66,4 @@ const About = aboutWrapper(() => {
   );
 });
 
-export default memo(About);
+export default About;

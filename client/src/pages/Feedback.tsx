@@ -3,7 +3,8 @@ import Image from "../components/ui/Image";
 import Subtitle from "../components/ui/Subtitle";
 import Button from "../components/ui/Button";
 import Container from "../components/ui/Container";
-import feedbackWrapper from "../HOC/feedbackWrapper";
+import feedbackWrapper, { FeedbackProps } from "../HOC/feedbackWrapper";
+import useMyMemo from "../hooks/useMyMemo";
 
 const Feedback = feedbackWrapper(({ handleOpenModal }) => {
   return (
@@ -59,4 +60,4 @@ const Feedback = feedbackWrapper(({ handleOpenModal }) => {
   );
 });
 
-export default Feedback;
+export default useMyMemo<FeedbackProps>(Feedback);

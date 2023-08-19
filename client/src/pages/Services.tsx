@@ -2,8 +2,9 @@ import Paragraph from "../components/ui/Paragraph";
 import Image from "../components/ui/Image";
 import Subtitle from "../components/ui/Subtitle";
 import Container from "../components/ui/Container";
+import servicesWrapper from "../HOC/servicesWrapper";
 
-function Services() {
+const Services = servicesWrapper(() => {
   return (
     <Container className=" lg:px-20 md:px10 px-5 gap-20 lg:pb-56 pb-32 lg:pt-32 pt-24">
       <div className=" w-full grid lg:grid-cols-2 lg:gap-10 gap-20 items-start lg:mb-20 lg:mt-0 mt-5">
@@ -72,6 +73,6 @@ function Services() {
       </div>
     </Container>
   );
-}
+});
 
 export default Services;

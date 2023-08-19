@@ -2,7 +2,7 @@ import React from "react";
 import useFetch from "../hooks/useFetch";
 import { PartnerProps } from "../lib/models";
 
-interface PartnersProps {
+export interface PartnersProps {
   isLoading: boolean;
   partners: PartnerProps[] | null;
 }

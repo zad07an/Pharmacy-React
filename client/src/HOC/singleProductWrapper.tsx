@@ -3,7 +3,7 @@ import useFetch from "../hooks/useFetch";
 import { DrugProps } from "../lib/models";
 import { useParams } from "react-router-dom";
 
-interface SingleProductProps {
+export interface SingleProductProps {
   isLoading: boolean;
   sizeIndex: number;
   drug: DrugProps | null;

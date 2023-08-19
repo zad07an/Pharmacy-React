@@ -30,3 +30,12 @@ export interface CategoryLinkProps {
 export interface PartnerProps {
   image: string;
 }
+
+export interface ContextProps {
+  isSuccess: boolean;
+  isMenuOpen: boolean;
+  handleOpenModal: () => void;
+  handleCloseModal: () => void;
+  handleOpenNavbarMenu: () => void;
+  handleCloseNavbarMenu: () => void;
+}

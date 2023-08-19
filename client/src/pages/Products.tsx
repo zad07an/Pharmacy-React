@@ -1,9 +1,9 @@
-import { memo } from "react";
 import Drug from "../components/drug/Drug";
 import DrugSkeleton from "../components/drug/DrugSkeleton";
-import productsWrapper from "../HOC/productsWrapper";
+import productsWrapper, { ProductsProps } from "../HOC/productsWrapper";
 import Subtitle from "../components/ui/Subtitle";
 import Container from "../components/ui/Container";
+import useMyMemo from "../hooks/useMyMemo";
 
 const Products = productsWrapper(({ isLoading, filteredProducts }) => {
   return (
@@ -25,4 +25,4 @@ const Products = productsWrapper(({ isLoading, filteredProducts }) => {
   );
 });
 
-export default memo(Products);
+export default useMyMemo<ProductsProps>(Products);

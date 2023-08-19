@@ -4,7 +4,7 @@ import useFetch from "../hooks/useFetch";
 import { NavigateFunction, useNavigate } from "react-router-dom";
 import { usePharmacyContext } from "../context/PharmacyProvider";
 
-interface HomeProps {
+export interface HomeProps {
   navigate: NavigateFunction;
   isLoading: boolean;
   drugs: DrugProps[] | null;

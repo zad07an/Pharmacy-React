@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Link } from "react-router-dom";
 import Container from "../components/ui/Container";
 
@@ -17,4 +18,4 @@ function NotFound() {
   );
 }
 
-export default NotFound;
+export default memo(NotFound);

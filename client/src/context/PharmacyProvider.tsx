@@ -1,18 +1,10 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 import SuccessModal from "../components/modals/SuccessModal";
 import Overlay from "../components/ui/Overlay";
+import { ContextProps } from "../lib/models";
 
 interface ProviderContext {
   children: ReactNode;
-}
-
-interface ContextProps {
-  isSuccess: boolean;
-  isMenuOpen: boolean;
-  handleOpenModal: () => void;
-  handleCloseModal: () => void;
-  handleOpenNavbarMenu: () => void;
-  handleCloseNavbarMenu: () => void;
 }
 
 const defaultValues = {
