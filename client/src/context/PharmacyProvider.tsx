@@ -46,14 +46,8 @@ function PharmacyProvider({ children }: ProviderContext) {
 
   return (
     <PharmacyContext.Provider value={contextValue}>
-      {isSuccess ? (
-        <>
-          <Overlay />
-          <SuccessModal />
-        </>
-      ) : isMenuOpen ? (
-        <Overlay />
-      ) : null}
+      <SuccessModal />
+      {isMenuOpen || isSuccess ? <Overlay /> : null}
       {children}
     </PharmacyContext.Provider>
   );

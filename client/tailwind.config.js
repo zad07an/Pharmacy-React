@@ -13,6 +13,7 @@ export default {
       },
       colors: {
         "green-1": "#12724F",
+        "green-2": "#0F5F42",
         "gray-1": "#ddd"
       }
     }

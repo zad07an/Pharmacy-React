@@ -8,14 +8,16 @@ import { usePharmacyContext } from "../../context/PharmacyProvider";
 
 function SuccessModal() {
   const modalRef = useRef<HTMLDivElement | null>(null);
-  const { handleCloseModal } = usePharmacyContext();
+  const { handleCloseModal, isSuccess } = usePharmacyContext();
 
   useClickOutside(modalRef, handleCloseModal);
 
   return (
     <div
       ref={modalRef}
-      className=" lg:w-1/2 md:w-3/4 sm:w-11/12 w-full sm:h-fit h-[calc(100%-80px)] fixed left-0 bottom-0 sm:inset-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 bg-white z-50 shadow-md rounded-lg"
+      className={` ${
+        isSuccess ? "opacity-100 scale-100" : "opacity-0 scale-0"
+      } lg:w-1/2 md:w-3/4 sm:w-11/12 w-full sm:h-fit h-[calc(100%-80px)] fixed left-0 bottom-0 sm:inset-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 bg-white z-50 shadow-md rounded-lg transition-all duration-200`}
     >
       <div className=" w-full h-full flex items-center justify-center flex-col gap-6 relative px-6 py-20 text-center">
         <button
